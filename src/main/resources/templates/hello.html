@@ -1,0 +1,21 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+  <head>
+    <title>Workout 2</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Workout 2</title>
+    </head>
+    <body>
+        <p th:text="'Welcome ' + ${name}">Hello</p>
+        <h1>The students in our school:</h1>
+        <ul>
+            <li th:each="student : ${students}">
+                <span th:text="${student.getFirstName()}">First name</span> 
+                <span th:text="${student.getLastName()}">Last name</span>
+            </li>
+        </ul>
+    </body>
+</html>
